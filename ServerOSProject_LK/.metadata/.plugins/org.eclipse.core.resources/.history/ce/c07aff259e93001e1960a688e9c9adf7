@@ -1,0 +1,38 @@
+import java.util.Iterator;
+import java.util.LinkedList;
+
+public class Library {
+
+	LinkedList<Book> myList;
+	
+	public Library()
+	{
+		myList = new LinkedList<Book>();
+	}
+	
+	public synchronized void addBook(String title, String author, String price)
+	{
+		Book temp = new Book(title, author, Float.parseFloat(price));
+		
+		myList.add(temp);
+	}
+	
+	public synchronized String searchBook(String title)
+	{
+		Iterator<Book> i = myList.iterator();
+		int found = 0;
+		String response = "Not found";
+		while(i.hasNext() && found==0)
+		{
+			Book temp = i.next();
+			
+			if(temp.getBookName().equalsIgnoreCase(title))
+			{
+				found = 1;
+				response = temp.toString();
+			}
+		}
+		
+		return response;
+	}
+}

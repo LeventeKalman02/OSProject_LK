@@ -1,0 +1,4 @@
+INDEX VERSION 1.132+E:\Desktop\School\ATU SOFTWARE DEV YEAR 3\Operating Systems Project\ClientOSProject_LK\.metadata\.plugins\org.eclipse.jdt.core
+117290345.index
+2123570210.index
+1865797976.index
